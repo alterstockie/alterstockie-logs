@@ -11,12 +11,12 @@ var appRoot = path.join(__dirname, '..');
 function createConfig() {
   var fileStorage, storage;
 
-  if (!!process.env.GCS_PRIVATE_KEY_ID) {
+  if (!!process.env.GCS_PROJECT_ID) {
     fileStorage = true
     storage = {
       active: 'gcloud',
       'gcloud': {
-	      projectId: process.env.GCS_PROJECT_ID,
+        projectId: process.env.GCS_PROJECT_ID,
         key: process.env.GCS_PRIVATE_KEY,
         bucket: process.env.GCS_BUCKET_NAME,
         assetDomain: process.env.GCS_ASSET_DOMAIN,
