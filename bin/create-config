@@ -16,8 +16,8 @@ function createConfig() {
     storage = {
       active: 'gcloud',
       'gcloud': {
-	projectId: process.env.GCS_PROJECT_ID,
-        key: process.env.GCS_PROJECT_ID,
+	      projectId: process.env.GCS_PROJECT_ID,
+        key: process.env.GCS_PRIVATE_KEY,
         bucket: process.env.GCS_BUCKET_NAME,
         assetDomain: process.env.GCS_ASSET_DOMAIN,
         insecure: true,
